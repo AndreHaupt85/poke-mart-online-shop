@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import styled from "styled-components";
+import ItemSubFetch from "./ItemSubFetch";
 
-export default function ItemFetch1() {
+export default function ItemMainFetch() {
 
     const apiURL = "https://pokeapi.co/api/v2/item/";
 
@@ -13,11 +15,20 @@ export default function ItemFetch1() {
             .catch((error) => console.error(error));
     }, [apiURL]);
 
+
     return (
-        <ul className="app">
+        <div className="app">
             {items.map((item) => {
-                return <li key={item.name}>{item.name}</li>
+                return <ItemSubFetch key={item.name} pokeitem={item}/>
             })}
-        </ul>
+        </div>
     )
 };
+
+
+const ItemSubfetch = styled.div`
+    background-color: #6699CC;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+`
