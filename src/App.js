@@ -1,12 +1,15 @@
-import './App.css';
 import Header from './components/Header';
-import ItemFetch1 from './components/ItemFetch1';
+import ItemMainFetch from './components/ItemMainFetch';
 
 function App() {
+
+
+  
   return (
     <div className="App">
       <Header />
-      <ItemFetch1 />
+      <ItemMainFetch />
+      
     </div>
   );
 }
