@@ -1,5 +1,12 @@
+import styled from "styled-components"
+
+
 export default function Header() {
     return (
-        <h1>Poké Mart Online-Shop</h1>
+        <Headline>Poké Mart Online-Shop</Headline>
     )
 };
+
+const Headline = styled.h1`
+background: red;
+`

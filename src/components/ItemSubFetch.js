@@ -41,3 +41,4 @@ export default function ItemSubFetch({ pokeitem, onAddButton, onRemoveButton }) 
         </div>
     )
 };
+
